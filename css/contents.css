@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.tit-area{display:flex;justify-content:space-between;margin-bottom:8px;align-items:center;width:100%;}
+.sub-title{font-size:20px;line-height:26px;display:flex;align-items:center;}
+.sub-title::before{content:'';display:block;width:16px;height:16px;background:url(../img/icon/ic-bullet.png) 50% 50% no-repeat;margin-right:8px;}
+.sub-title strong{font-weight:700;}
+.tit-area .tiny{font-size:13px;font-weight:500;color:#bfd7fe;}
+
+.info-list{display:flex;gap:8px;width:100%;}
+.info-list > li{width:33.333%; padding: 16px;border-radius: 8px;background-color: #222934;}
+.info-list > li .s-tit{font-size:17px;display:block;line-height:1.3;font-weight:500;color:#dbe8fe;display:flex;align-items:center;gap:0 4px;}
+.info-list > li .s-tit em{font-size:13px;color:#ffb3b0;}
+.info-list > li .s-num{display:block;margin-top:30px;color:#93bffd;font-weight:700;font-size:15px;}
+.info-list > li .s-num em{display:block;margin-top:2px;font-weight:inherit;}
+.info-list > li.on{background-color: rgba(227, 126, 255, 0.15);}
+.info-list > li.on .s-tit, .info-list > li.on .s-num{color:#f8eaff;}
+.info-list.tp2 > li .s-num{margin-top:px;}
+
+.map-wrap .tit-area{padding:13px 24px; border-radius: 12px;-webkit-backdrop-filter: blur(8px);backdrop-filter: blur(8px);background-color: rgba(96, 156, 250, 0.3);position: absolute;width:auto;left:30px;top:30px;margin-bottom:0;}

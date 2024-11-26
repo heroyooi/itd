@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>24년국가교통정보센터</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
+  <script src="js/jquery.cookie.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/tui-time-picker.js"></script>
+  <script src="js/tui-date-picker.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="tab-base gnb">
+        <ul>
+          <li class="on"><a href="#tab1">사고</a></li>
+          <li><a href="#tab2">교통</a></li>
+          <li><a href="#tab3">연계</a></li>
+          <li><a href="#tab4">서비스</a></li>
+        </ul>
+      </div>
+      <h1>사고재난 <span>대시보드</span></h1>
+      <div class="item-area">
+        <!--
+        <div class="tab-base period">
+          <ul>
+            <li class="on"><a href="#">일간</a></li>
+            <li><a href="#">주간</a></li>
+            <li><a href="#">월간</a></li>
+          </ul>
+        </div>
+        -->
+        <span class="date">2024년 10월 19일 10:00 기준</span>
+        <a href="#" class="btn-ico reload">새로고침</a>
+      </div>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="content-wrap">
+        <div class="map-wrap" style="background: url(/img/map/map.png) 50% 50% no-repeat;background-size:cover;">
+          <span class="stick tp-blue" style="left: 363px; top: 134px;"></span>
+          <span class="stick tp-pink" style="left: 561px; top: 115px;"></span>
+          <span class="stick tp-yellow h51" style="left: 420px; top: 213px;"></span>
+          <span class="stick tp-blue h51" style="left: 497px; top: 295px;"></span>
+          <span class="stick tp-blue h39" style="left: 337px; top: 351px;"></span>
+          <span class="stick tp-blue" style="left: 403px; top: 325px;"></span>
+          <span class="stick tp-yellow h31" style="left: 638px; top: 374px;"></span>
+          <span class="stick tp-blue h39" style="left: 426px; top: 398px;"></span>
+          <span class="stick tp-blue h39" style="left: 391px; top: 507px;"></span>
+          <span class="stick tp-blue h31" style="left: 594px; top: 494px;"></span>
+          <span class="stick tp-blue h108" style="left: 694px; top: 470px;"></span>
+          <span class="stick tp-yellow h51" style="left: 344px; top: 597px;"></span>
+          <span class="stick tp-blue" style="left: 417px; top: 580px;"></span>
+          <span class="stick tp-blue" style="left: 530px; top: 540px;"></span>
+          <span class="stick tp-yellow" style="left: 666px; top: 560px;"></span>
+
+          <span class="stick tp-blue" style="left: 300px; bottom: 56px;"></span>
+
+          <div class="tip-area" style="right: 203.2px; top: 109.6px; min-width: 148px;">
+            <p class="s-tit">강원</p>
+            <ul>
+              <li>
+                <span class="label">총사고건수</span>
+                <span class="count"><em>23,845</em> 건</span>
+              </li>
+              <li>
+                <span class="label">고속도로</span>
+                <span class="count"><em>566,715</em> 건</span>
+              </li>
+              <li>
+                <span class="label">국도</span>
+                <span class="count"><em>566,715</em> 건</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="map-item" style="right: 30px; bottom: 30px;">
+            <div class="tab-base map">
+              <ul>
+                <li class="on"><a href="#">전체</a></li>
+                <li><a href="#">고속도로</a></li>
+                <li><a href="#">국도</a></li>
+              </ul>
+            </div>
+            <div class="control-area">
+              <a href="#" class="pause"></a>
+            </div>
+            <!--
+            <div class="control-area">
+              <a href="#" class="prev"></a>
+              <a href="#" class="pause"></a>
+              <a href="#" class="next"></a>
+            </div>
+            -->
+          </div>
+        </div><!-- .map-wrap -->
+        <div class="chart-wrap c-scrollbar">
+          <div class="row-area">
+            <div class="col-area">
+              <div class="tit-area">
+                <h3 class="sub-title"><span><strong>실시간 돌발 사고</strong> 현황</span></h3>
+              </div>
+              <ul class="info-list">
+                <li>
+                  <span class="s-tit">도로공사</span>
+                  <span class="s-num"><span id="count-1">000,000,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">경찰청</span>
+                  <span class="s-num"><span id="count-2">000,000,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">국도통합센터</span>
+                  <span class="s-num"><span id="count-3">000,000,000</span><em>(건)</em></span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-area">
+              <div class="tit-area">
+                <h3 class="sub-title"><span><strong>2024년 누적 돌발 사고</strong> 현황</span></h3>
+              </div>
+              <ul class="info-list">
+                <li>
+                  <span class="s-tit">도로공사</span>
+                  <span class="s-num"><span id="count-4">000,000,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">경찰청</span>
+                  <span class="s-num"><span id="count-5">000,000,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">국도통합센터</span>
+                  <span class="s-num"><span id="count-6">000,000,000</span><em>(건)</em></span>
+                </li>
+              </ul>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area">
+            <div class="col-area">
+              <div class="tit-area">
+                <h3 class="sub-title"><span><strong>권역별 사고</strong> 통계</span></h3>
+                <span class="tiny">2020년 ~ 2023년</span>
+              </div>
+              <ul class="info-list tp2">
+                <li class="on">
+                  <span class="s-tit">수도권 <em>1ST</em></span>
+                  <span class="s-num"><span id="count-7">00,000</span><em>(건)</em></span>
+                </li>
+                <li class="on">
+                  <span class="s-tit">강원 <em>2ND</em></span>
+                  <span class="s-num"><span id="count-8">00,000</span><em>(건)</em></span>
+                </li>
+                <li class="on">
+                  <span class="s-tit">충북 <em>3RD</em></span>
+                  <span class="s-num"><span id="count-9">00,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">전남</span>
+                  <span class="s-num"><span id="count-10">00,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">경북</span>
+                  <span class="s-num"><span id="count-11">00,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">경남</span>
+                  <span class="s-num"><span id="count-12">00,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">충북</span>
+                  <span class="s-num"><span id="count-13">00,000</span><em>(건)</em></span>
+                </li>
+                <li>
+                  <span class="s-tit">전남</span>
+                  <span class="s-num"><span id="count-14">00,000</span><em>(건)</em></span>
+                </li>
+              </ul>
+              <div class="chart-area mt8">
+                <div class="inner">
+                  <div id="barLineChart1" style="width: 100%; height: 155px;"></div>
+                </div>
+              </div>
+            </div><!-- .col-area -->
+          </div><!-- .row-area -->
+          <div class="row-area">
+            <div class="col-area">
+              <div class="tit-area">
+                <h3 class="sub-title"><span><strong>권역별 사망자</strong> 통계</span></h3>
+                <span class="tiny">2020년 ~ 2023년</span>
+              </div>
+              <div class="chart-area">
+                <div class="inner">
+                  <div id="barLineChart2" style="width: 100%; height: 155px;"></div>
+                </div>
+              </div>
+            </div><!-- .col-area -->
+          </div><!-- .row-area -->
+          <div class="row-area">
+            <div class="col-area">
+              <div class="tit-area">
+                <h3 class="sub-title"><span><strong>권역별 부상자</strong> 통계</span></h3>
+                <span class="tiny">2020년 ~ 2023년</span>
+              </div>
+              <div class="chart-area">
+                <div class="inner">
+                  <div id="barLineChart3" style="width: 100%; height: 155px;"></div>
+                </div>
+              </div>
+            </div><!-- .col-area -->
+          </div><!-- .row-area -->
+        </div><!-- .chart-wrap -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrapper -->
+  <script src="js/jquery.animateNumber.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/chartOption.js"></script>
+  <script>
+    var query = $.urlParam('sample');
+	  if (query === '') {}
+
+    var countAni = function(selector, number, speed) {
+      $(selector).animateNumber({
+        number: number,
+        numberStep: function(now, tween) {
+          $(tween.elem).text(numberWithCommas(Math.floor(now)));
+        }
+      }, speed);  
+    }
+
+    var countSpeed = 3000;
+    countAni('#count-1', 99999, countSpeed);
+    countAni('#count-2', 99998, countSpeed);
+    countAni('#count-3', 99997, countSpeed);
+    countAni('#count-4', 99996, countSpeed);
+    countAni('#count-5', 99995, countSpeed);
+    countAni('#count-6', 99994, countSpeed);
+    countAni('#count-7', 9999, countSpeed);
+    countAni('#count-8', 9999, countSpeed);
+    countAni('#count-9', 9999, countSpeed);
+    countAni('#count-10', 9999, countSpeed);
+    countAni('#count-11', 9998, countSpeed);
+    countAni('#count-12', 9997, countSpeed);
+    countAni('#count-13', 9996, countSpeed);
+    countAni('#count-14', 9995, countSpeed);
+
+    var barLineChart1 = echarts.init(document.getElementById('barLineChart1'));
+    var barLineChart2 = echarts.init(document.getElementById('barLineChart2'));
+    var barLineChart3 = echarts.init(document.getElementById('barLineChart3'));
+    barLineChart1.setOption(options['barLine']);
+    barLineChart2.setOption(options['barLine']);
+    barLineChart3.setOption(options['barLine']);
+
+    $(window).on('load resize', function(){
+      $('.content-wrap').css('height', $(window).height() - 70);
+    });
+
+    $(window).on('resize', function(){
+      barLineChart1.resize();
+      barLineChart2.resize();
+      barLineChart3.resize();
+    });
+  </script>
+</body>
+</html>

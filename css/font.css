@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Light.woff') format('woff');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Medium.woff') format('woff');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'SpoqaHanSansNeo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Bold.woff') format('woff');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'S-CoreDream';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7Bold.woff') format('woff');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}

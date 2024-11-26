@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>퍼블리싱 - 컴포넌트 가이드</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <style>
+    .component-menu{position:fixed;right:10px;top:10px;padding:10px;background-color:#fff;border:1px solid #ddd;box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.07);border-radius:5px;z-index:1;}
+    .component-menu li{font-size:12px;margin-top:10px;cursor:pointer;}
+    .component-menu li:first-child{margin-top:0;}
+    .component-menu li.on{color:#1b64c8;font-weight:500;}
+    .component-menu .component-list{margin-bottom:10px;}
+    .component-menu .btn-base a{font-size:12px;padding:5px;}
+
+    .tooltip-list li{margin-top:10px;}
+    .tooltip-list li a{display:inline-block;margin:1px 0;padding:6px;background-color:#222;border-radius:3px;color:#fff;width:72px;text-align:center;}
+    .tooltip-list li a:hover{background-color:#0ae;}
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h1>퍼블리싱 폴포츠 <span>(컴포넌트 가이드)</span></h1>      
+    </div><!-- #header -->
+    
+    <div id="container" class="ex_wrp component">
+
+<pre class="language-html guide">
+<code><link rel="stylesheet" href="css/common.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/tui-time-picker.js"></script>
+<script src="js/tui-date-picker.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/aos.js"></script>
+<script src="js/ui.js"></script></code>
+</pre>
+
+      <div class="section">
+        <div class="tit-area">
+          <h3 class="sub-title"><span><strong>탭</strong></span></h3>
+        </div>
+        <div class="code-area">
+          <h3>GNB <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base gnb">
+  <ul>
+    <li class="on"><a href="#tab1">사고</a></li>
+    <li><a href="#tab2">교통</a></li>
+    <li><a href="#tab3">연계</a></li>
+    <li><a href="#tab4">서비스</a></li>
+  </ul>
+</div>
+<ul class="panel-base">
+  <li id="tab1">1</li>
+  <li id="tab2">2</li>
+  <li id="tab3">3</li>
+  <li id="tab4">4</li>
+</ul></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>MAP <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base map">
+  <ul>
+    <li class="on"><a href="#">전체</a></li>
+    <li><a href="#">수도/강원권</a></li>
+    <li><a href="#">충청권</a></li>
+    <li><a href="#">제주/전라권</a></li>
+    <li><a href="#">경상권</a></li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>ETC <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base etc">
+  <ul>
+    <li class="on"><a href="#">서울</a></li>
+    <li><a href="#">대전</a></li>
+    <li><a href="#">부산</a></li>
+    <li><a href="#">대구</a></li>
+    <li><a href="#">광주</a></li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>PERIOD <button>코드 보기</button></h3>
+<div class="code-box"><div class="tab-base period">
+  <ul>
+    <li class="on"><a href="#">일간</a></li>
+    <li><a href="#">주간</a></li>
+    <li><a href="#">월간</a></li>
+  </ul>
+</div></div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
+
+
+      <div class="section">
+        <div class="tit-area">
+          <h3 class="sub-title"><span><strong>Effect</strong></span></h3>
+        </div>
+        <div class="code-area">
+          <h3>효과 <button>코드 보기</button></h3>
+<div class="code-box"><img src="img/connection/effect_connection.gif" alt=""></div>
+<pre class="language-html"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>효과 <button>코드 보기</button></h3>
+<div class="code-box">
+
+<div class="arrow-animation-wrap">
+  <div class="arrow-animation up">
+    <img class="arrow u31" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u30" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u29" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u28" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u27" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u26" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u25" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u24" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u23" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u22" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u21" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u20" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u19" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u18" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u17" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u16" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u15" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u14" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u13" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u12" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u11" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u10" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u9" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u8" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u7" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u6" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u5" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u4" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u3" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u2" src="img/accident/img-polygon-r.png" alt="">
+    <img class="arrow u1" src="img/accident/img-polygon-r.png" alt="">
+  </div>
+
+  <div class="arrow-animation down">
+    <img class="arrow d31" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d30" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d29" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d28" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d27" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d26" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d25" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d24" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d23" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d22" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d21" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d20" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d19" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d18" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d17" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d16" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d15" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d14" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d13" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d12" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d11" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d10" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d9" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d8" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d7" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d6" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d5" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d4" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d3" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d2" src="img/accident/img-polygon-b.png" alt="">
+    <img class="arrow d1" src="img/accident/img-polygon-b.png" alt="">
+  </div>
+</div>
+
+</div>
+<pre class="language-html"></pre>
+        </div>
+      </div>
+
+
+      <div class="section">
+        <div class="tit-area">
+          <h3 class="sub-title"><span><strong>EChart</strong></span></h3>
+        </div>
+        <div class="code-area">
+          <h3>barLine 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div id="barLineChart1" style="width: 100%; height: 155px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/chartOption.js"></script></div>
+<script>
+var barLineChart1 = echarts.init(document.getElementById('barLineChart1'));
+barLineChart1.setOption(options['barLine']);
+$(window).on('resize', function(){
+  barLineChart1.resize();
+});
+</script>
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Bar Stack 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div id="barStackChart" style="width: 100%; height: 372px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/chartOption.js"></script></div>
+<script>var barStackChart = echarts.init(document.getElementById('barStackChart'));
+barStackChart.setOption(options['barStack']);
+window.addEventListener('resize', function () {
+barStackChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        <div class="code-area">
+          <h3>Line + Bar 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area">
+  <div id="lineBarChart" style="width: 100%; height: 411px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var lineBarChart = echarts.init(document.getElementById('lineBarChart'));
+lineBarChart.setOption(options['lineBar']);
+window.addEventListener('resize', function () {
+lineBarChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+        
+      </div><!-- .section -->
+
+      <div class="section">
+        <h2>EChart - BGF - <span>echartOptions.js</span></h2>
+
+        <div class="code-area">
+          <h3>Line 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div id="lineChart" style="width: 100%; height: 200px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></div>
+<script>var lineChart = echarts.init(document.getElementById('lineChart'));
+lineChart.setOption(options['line']);
+window.addEventListener('resize', function () {
+  lineChart.resize();
+});</script>
+
+<pre class="language-html direct"><code><div id="lineChart" style="width: 100%; height: 200px;"></div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions.js"></script></code></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>Doughnut 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area" style="min-height: 404px;">
+  <div class="inner">
+    <div id="doughnutChart2" style="width: 100%; height: 372px;"></div>
+  </div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/echartOptions2.js"></script></div>
+<script>var doughnutChart2 = echarts.init(document.getElementById('doughnutChart2'));
+doughnutChart2.setOption(options['doughnut']);
+window.addEventListener('resize', function () {
+doughnutChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- //section -->
+
+      <script>
+        GUI.mainScroll();
+      </script>
+
+    </div><!-- #container -->
+
+  </div><!-- #wrapper -->
+  <script src="js/prism.js"></script>
+</body>
+</html>
