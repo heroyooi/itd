@@ -8,22 +8,43 @@
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/prism.css">
   <style>
-    .component-menu{position:fixed;right:10px;top:10px;padding:10px;background-color:#fff;border:1px solid #ddd;box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.07);border-radius:5px;z-index:1;}
-    .component-menu li{font-size:12px;margin-top:10px;cursor:pointer;}
-    .component-menu li:first-child{margin-top:0;}
-    .component-menu li.on{color:#1b64c8;font-weight:500;}
-    .component-menu .component-list{margin-bottom:10px;}
-    .component-menu .btn-base a{font-size:12px;padding:5px;}
-
-    .tooltip-list li{margin-top:10px;}
-    .tooltip-list li a{display:inline-block;margin:1px 0;padding:6px;background-color:#222;border-radius:3px;color:#fff;width:72px;text-align:center;}
-    .tooltip-list li a:hover{background-color:#0ae;}
+    .ex_wrp{max-width:790px;margin:0 auto;font-family:'Montserrat', 'Noto Sans KR', sans-serif;}
+    .ex_wrp pre{display:none;}
+    .ex_wrp pre.guide{display:block;}
+    .ex_wrp h2{font-size:24px;}
+    .ex_wrp h2 span{font-size:16px;}
+    .ex_wrp .section{margin-top:50px;position: relative;}
+    .ex_wrp h3{font-size:18px;padding:0 0 10px;}
+    .ex_wrp h3 button{display:inline-block;background-color:#333;color:#fff;padding:5px;border-radius:3px;font-size:12px;}
+    .ex_wrp .code-area{margin-top:30px;}
+    .ex_wrp .arrow-animation-wrap{gap:0 50px;padding: 50px;}
   </style>
 </head>
 <body>
   <div id="wrapper">
     <div id="header">
-      <h1>퍼블리싱 폴포츠 <span>(컴포넌트 가이드)</span></h1>      
+      <div class="tab-base gnb">
+        <ul>
+          <li><a href="#tab1">사고</a></li>
+          <li><a href="#tab2">교통</a></li>
+          <li><a href="#tab3">연계</a></li>
+          <li class="on"><a href="#tab4">서비스</a></li>
+        </ul>
+      </div>
+      <h1>컴포넌트 <span>가이드</span></h1>
+      <div class="item-area">
+        <!--
+        <div class="tab-base period">
+          <ul>
+            <li class="on"><a href="#">일간</a></li>
+            <li><a href="#">주간</a></li>
+            <li><a href="#">월간</a></li>
+          </ul>
+        </div>
+        -->
+        <span class="date">2024년 10월 19일 10:00 기준</span>
+        <a href="#" class="btn-ico reload">새로고침</a>
+      </div>
     </div><!-- #header -->
     
     <div id="container" class="ex_wrp component">
@@ -31,13 +52,6 @@
 <pre class="language-html guide">
 <code><link rel="stylesheet" href="css/common.css">
 <script src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/swiper.js"></script>
-<script src="js/tui-time-picker.js"></script>
-<script src="js/tui-date-picker.js"></script>
-<script src="js/jquery.magnific-popup.min.js"></script>
-<script src="js/aos.js"></script>
 <script src="js/ui.js"></script></code>
 </pre>
 
@@ -54,13 +68,7 @@
     <li><a href="#tab3">연계</a></li>
     <li><a href="#tab4">서비스</a></li>
   </ul>
-</div>
-<ul class="panel-base">
-  <li id="tab1">1</li>
-  <li id="tab2">2</li>
-  <li id="tab3">3</li>
-  <li id="tab4">4</li>
-</ul></div>
+</div></div>
 <pre class="language-html"></pre>
         </div>
 
@@ -106,19 +114,51 @@
         </div>
       </div><!-- .section -->
 
+      <div class="section">
+        <div class="tit-area">
+          <h3 class="sub-title"><span><strong>툴팁 지역명 라벨 색상</strong></span></h3>
+        </div>
+        <div class="code-area">
+          <h3>라벨 <button>코드 보기</button></h3>
+<div class="code-box">
+<span class="s-badge gye">경기</span>
+<span class="s-badge seoul">서울</span>
+<span class="s-badge gan">강원</span>
+
+<br />
+
+<span class="s-badge cb">충북</span>
+<span class="s-badge dj">대전</span>
+<span class="s-badge sj">세종</span>
+<span class="s-badge cn">충남</span>
+
+<br />
+
+<span class="s-badge jb">전북</span>
+<span class="s-badge gj">광주</span>
+<span class="s-badge jeju">제주</span>
+<span class="s-badge jn">전남</span>
+
+<br />
+
+<span class="s-badge gb">경북</span>
+<span class="s-badge dg">대구</span>
+<span class="s-badge us">울산</span>
+<span class="s-badge gn">경남</span>
+<span class="s-badge busan">부산</span>
+
+</div>
+<pre class="language-html"></pre>
+        </div>
+      </div><!-- .section -->
 
       <div class="section">
         <div class="tit-area">
           <h3 class="sub-title"><span><strong>Effect</strong></span></h3>
         </div>
-        <div class="code-area">
-          <h3>효과 <button>코드 보기</button></h3>
-<div class="code-box"><img src="img/connection/effect_connection.gif" alt=""></div>
-<pre class="language-html"></pre>
-        </div>
 
         <div class="code-area">
-          <h3>효과 <button>코드 보기</button></h3>
+          <h3>상행·하행 <button>코드 보기</button></h3>
 <div class="code-box">
 
 <div class="arrow-animation-wrap">

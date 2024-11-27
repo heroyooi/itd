@@ -184,7 +184,7 @@ var options = {
         grid: {
             left: '0%',
             right: '0%',
-            bottom: '3%',
+            bottom: '0%',
             containLabel: true,
             top: '10%', // 그래프 영역을 아래로 이동
         },
@@ -290,5 +290,260 @@ var options = {
                 data: [5, 5, 50, 8, 28, 8, 3, 9, 12, 18, 8, 7]
             },
         ],
+    },
+    lineBar: {
+        color: ['#2558eb', '#2fe728', '#93bffd'],
+        title: {
+            show: false
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            textStyle: {
+                color: '#ffffff',
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            data: ['신청건수', '응답시간', '호출건수'],
+            textStyle: {
+                color: '#b2bbce',
+                fontFamily: 'Pretendard',
+            },
+            top: '0%',
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '0%',
+            containLabel: true,
+            top: '12%',
+        },
+        toolbox: {
+            show: false
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['교통소통정보', '돌발상황정보', 'CCTV 화상자료', '교통예측정보', '차량검지정보', 'VMS 정보', '주의운전 구간정보', 'VSL 정보'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 12,
+                    fontWeight: 500,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                },
+                interval: 0,
+            },
+        },
+        yAxis: [
+            {
+                type: 'value',
+                position: 'left',
+                alignTicks: true,
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#3e4157',
+                    },
+                },
+                splitLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#3e4157'
+                    },
+                },
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 10,
+                        fontWeight: 300,
+                        fontFamily: 'Pretendard',
+                        color: '#bfd7fe'
+                    }
+                },
+                min: 0,
+                max: 325,
+                interval: 25,
+                name: '(신청건수)',
+                nameLocation: 'end',
+                nameTextStyle: {
+                    fontSize: 12,
+                    fontWeight: 300,
+                    color: '#bfd7fe',
+                    fontFamily: 'Pretendard',
+                }
+            },
+            {
+                type: 'value',
+                position: 'right',
+                alignTicks: true,
+                axisLine: {
+                    show: true,
+                    lineStyle: {
+                        color: '#3e4157',
+                    },
+                },
+                splitLine: {
+                    show: false,
+                },
+                axisLabel: {
+                    textStyle: {
+                        fontSize: 10,
+                        fontWeight: 300,
+                        fontFamily: 'Pretendard',
+                        color: '#bfd7fe'
+                    }
+                },
+                min: 0,
+                max: 130000,
+                interval: 10000,
+                name: '(호출건수, 응답시간)',
+                nameLocation: 'end',
+                nameTextStyle: {
+                    fontSize: 12,
+                    fontWeight: 300,
+                    color: '#bfd7fe',
+                    fontFamily: 'Pretendard',
+                    padding: [0, 10, 0, 0]
+                }
+            }
+        ],
+        series: [
+            {
+                name: '신청건수',
+                type: 'bar',
+                yAxisIndex: 1, // 오른쪽 y축 사용
+                barWidth: 16,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [82000, 55000, 45000, 61000, 15000, 11000, 19000, 10000],
+            },
+            {
+                name: '응답시간',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 7,
+                data: [190, 230, 205, 280, 240, 140, 150, 130]
+            },
+            {
+                name: '호출건수',
+                type: 'line',
+                symbol: 'circle',
+                symbolSize: 7,
+                data: [315, 270, 280, 255, 130, 260, 280, 225]
+            },
+        ]
+    },
+
+    bar: {
+        title: {
+            show: false,
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            show: false,
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '0%',
+            containLabel: true,
+            top: '2%', // 그래프 영역을 아래로 이동
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['교통소통정보', 'CCTV', '돌발정보', '도시간 소요시간', '통계정보', '오픈데이터 목록', '지식정보센터', 'FAQ'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 12,
+                    fontWeight: 500,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            }
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 10,
+                    fontWeight: 300,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                }
+            },
+            min: 0,
+            max: 325,
+            interval: 25,
+        },
+        series: [
+            {
+                name: "값1",
+                type: "bar",
+                showBackground: true,
+                backgroundStyle: {
+                    color: '#3a4454'
+                },
+                barWidth: 20,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [
+                    { value: 175, itemStyle: { color: '#2558eb' } },
+                    { value: 270, itemStyle: { color: '#2fe728' } },
+                    { value: 200, itemStyle: { color: '#21ced3' } },
+                    { value: 290, itemStyle: { color: '#d655a6' } },
+                    { value: 100, itemStyle: { color: '#e9ec20' } },
+                    { value: 295, itemStyle: { color: '#840bcb' } },
+                    { value: 210, itemStyle: { color: '#e27241' } },
+                    { value: 260, itemStyle: { color: '#c32f2f' } }
+                ]
+            },
+        ]
     },
 }

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>24년국가교통정보센터</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="tab-base gnb">
+        <ul>
+          <li><a href="#tab1">사고</a></li>
+          <li><a href="#tab2">교통</a></li>
+          <li><a href="#tab3">연계</a></li>
+          <li class="on"><a href="#tab4">서비스</a></li>
+        </ul>
+      </div>
+      <h1>서비스현황 <span>대시보드</span></h1>
+      <div class="item-area">
+        <div class="tab-base period">
+          <ul>
+            <li class="on"><a href="#">일간</a></li>
+            <li><a href="#">주간</a></li>
+            <li><a href="#">월간</a></li>
+          </ul>
+        </div>
+        <span class="date">2024년 10월 19일 10:00 기준</span>
+        <a href="#" class="btn-ico reload">새로고침</a>
+      </div>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="content-wrap ver_twinchart">
+        <div class="chart-wrap c-scrollbar">
+          <div class="row-area">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span>홈페이지 PC, Mobile <strong>접속자 수 현황 / 점유율</strong></span></h3>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="col-area">
+              <div class="chart-area">
+                
+              </div>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span><strong>메뉴별</strong> 접속 현황</span></h3>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="col-area">
+              <div class="chart-area ver_bar">
+                <div id="barChart" style="width: 100%; height: 185px;"></div>
+              </div>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span><strong>Data File 다운로드</strong> 현황</span></h3>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="col-area">
+              <div class="chart-area ver_bar">
+                
+              </div>
+            </div>
+          </div><!-- .row-area -->
+        </div><!-- .chart-wrap -->
+        <div class="chart-wrap c-scrollbar">
+          <div class="row-area">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span>Open API <strong>현황</strong></span></h3>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="col-area">
+              <div class="chart-area ver_linebar">
+                <div id="lineBarChart" style="width: 100%; height: 290px;"></div>
+              </div>
+            </div>
+          </div><!-- .row-area -->
+        </div><!-- .chart-wrap -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrapper -->
+  <script src="js/jquery.animateNumber.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/chartOption.js"></script>
+  <script>
+    var type = $.urlParam('type');
+    if (type) {
+      $('.tip-area.ver_local').hide();
+      setTimeout(() => {
+        $('.tab-base.map li').eq(type - 1).find('a').click();
+      }, 250);
+    }
+	  if (type === '2') { // 경기, 서울, 강원
+      $('.gye, .seoul, .gan').closest('.tip-area.ver_local').show();
+    } else if (type === '3') { // 충북, 대전, 세종, 충남
+      $('.cb, .dj, .sj, .cn').closest('.tip-area.ver_local').show();
+    } else if (type === '4') { // 전북, 광주, 제주, 전남
+      $('.jb, .gj, .jeju, .jn').closest('.tip-area.ver_local').show();
+    } else if (type === '5') { // 경북, 대구, 울산, 경남, 부산
+      $('.gb, .dg, .us, .gn, .busan').closest('.tip-area.ver_local').show();
+    }
+    
+    var countAni = function(selector, number, speed) {
+      $(selector).animateNumber({
+        number: number,
+        numberStep: function(now, tween) {
+          $(tween.elem).text(numberWithCommas(Math.floor(now)));
+        }
+      }, speed);  
+    }
+
+    countAni('.collection-area .logo-list > li dd .result.success em', 190718, 3000);
+    countAni('.collection-area .effect-area .total-text em', 190718 * 5, 3000);
+    countAni('.collection-area .total-area .inner p .total em.count', 190718 * 5, 3000);
+    countAni('.collection-area .total-area .inner p .total em.percent', 90, 3000);
+
+    var barChart = echarts.init(document.getElementById('barChart'));
+    var lineBarChart = echarts.init(document.getElementById('lineBarChart'));
+    barChart.setOption(options['bar']);
+    lineBarChart.setOption(options['lineBar']);
+    window.addEventListener('resize', function () {
+      barChart.resize();
+      lineBarChart.resize();
+    });
+  </script>
+</body>
+</html>

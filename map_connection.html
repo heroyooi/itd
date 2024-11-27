@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title>24년국가교통정보센터</title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="tab-base gnb">
+        <ul>
+          <li><a href="#tab1">사고</a></li>
+          <li><a href="#tab2">교통</a></li>
+          <li class="on"><a href="#tab3">연계</a></li>
+          <li><a href="#tab4">서비스</a></li>
+        </ul>
+      </div>
+      <h1>연계현황 <span>대시보드</span></h1>
+      <div class="item-area">
+        <!--
+        <div class="tab-base period">
+          <ul>
+            <li class="on"><a href="#">일간</a></li>
+            <li><a href="#">주간</a></li>
+            <li><a href="#">월간</a></li>
+          </ul>
+        </div>
+        -->
+        <span class="date">2024년 10월 19일 10:00 기준</span>
+        <a href="#" class="btn-ico reload">새로고침</a>
+      </div>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="content-wrap">
+        <div class="map-wrap" style="background: url(/img/map/map.png) 50% 50% no-repeat;background-size:cover;">
+          <!--
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1646684.4943605827!2d126.5694643929551!3d36.28366630777935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356455ebcb11ba9b%3A0x91249b00ba88db4b!2z64yA7ZWc66-86rWt!5e0!3m2!1sko!2skr!4v1732676765495!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          -->
+
+          <div class="tip-area ver_local" style="left: 166px; top: 7px;">
+            <dl>
+              <dt>
+                <span class="s-badge gye">경기</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 168px; top: 164px;">
+            <dl>
+              <dt>
+                <span class="s-badge seoul">서울</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="right: 111px; top: 9px;">
+            <dl>
+              <dt>
+                <span class="s-badge gan">강원</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="right: 240px; top: 155px;">
+            <dl>
+              <dt>
+                <span class="s-badge cb">충북</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 79px; top: 312px;">
+            <dl>
+              <dt>
+                <span class="s-badge cn">충남</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="right: 298px; top: 302px;">
+            <dl>
+              <dt>
+                <span class="s-badge dj">대전</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="right: 40px; top: 286px;">
+            <dl>
+              <dt>
+                <span class="s-badge gb">경북</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="right: 88px; top: 431px;">
+            <dl>
+              <dt>
+                <span class="s-badge dg">대구</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 265px; top: 455px;">
+            <dl>
+              <dt>
+                <span class="s-badge sj">세종</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 37px; top: 518px;">
+            <dl>
+              <dt>
+                <span class="s-badge jb">전북</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 169px; top: 665px;">
+            <dl>
+              <dt>
+                <span class="s-badge gj">광주</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 458px; top: 616px;">
+            <dl>
+              <dt>
+                <span class="s-badge gn">경남</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="right: 16px; top: 567px;">
+            <dl>
+              <dt>
+                <span class="s-badge us">울산</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="right: 56px; top: 699px;">
+            <dl>
+              <dt>
+                <span class="s-badge busan">부산</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 77px; bottom: 26px;">
+            <dl>
+              <dt>
+                <span class="s-badge jeju">제주</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="tip-area ver_local" style="left: 425px; bottom: 98px;">
+            <dl>
+              <dt>
+                <span class="s-badge jn">전남</span>
+                <div class="status">
+                  <span class="label">링크현황</span>
+                  <span class="num">9,100,915</span>
+                </div>
+              </dt>
+              <dd>
+                 <ul>
+                  <li>
+                    <span class="label">공공소통정보 융합</span>
+                    <span class="result">9,100,915 (00%)</span>
+                  </li>
+                  <li>
+                    <span class="label">민간소통정보 융합</span>
+                    <span class="result">132,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">KT</span>
+                    <span class="result">2,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">SKT</span>
+                    <span class="result">32,889 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">네이버</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                  <li class="sm">
+                    <span class="label">팅크웨어</span>
+                    <span class="result">89 (00%)</span>
+                  </li>
+                 </ul>
+              </dd>
+            </dl>
+          </div>
+
+          <div class="map-item" style="right: 30px; bottom: 30px;">
+            <div class="tab-base map">
+              <ul>
+                <li class="on"><a href="#">전체</a></li>
+                <li><a href="#">수도/강원권</a></li>
+                <li><a href="#">충청권</a></li>
+                <li><a href="#">제주/전라권</a></li>
+                <li><a href="#">경상권</a></li>
+              </ul>
+            </div>
+            <div class="control-area">
+              <a href="#" class="prev"></a>
+              <a href="#" class="pause"></a>
+              <a href="#" class="next"></a>
+            </div>
+          </div>
+        </div><!-- .map-wrap -->
+        <div class="chart-wrap c-scrollbar">
+          <div class="row-area">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span>소통정보 수집 <strong>성공률 / 수집 현황</strong></span></h3>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="collection-area">
+              <div class="collection-content">
+                <ul class="logo-list">
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="logo"><img src="img/connection/ic_korea.png" alt=""></span>
+                        <span class="txt">국토부</span>
+                      </dt>
+                      <dd>
+                        <p class="result success"><em>190,718</em>건</p>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="logo"><img src="img/connection/ic_police.png" alt=""></span>
+                        <span class="txt">경찰청</span>
+                      </dt>
+                      <dd>
+                        <p class="result success"><em>190,718</em>건</p>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="logo"><img src="img/connection/ic_ex.png" alt=""></span>
+                        <span class="txt">한국도로공사</span>
+                      </dt>
+                      <dd>
+                        <p class="result success"><em>190,718</em>건</p>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="logo"><img src="img/connection/ic_kt.png" alt=""></span>
+                        <span class="txt">KT</span>
+                      </dt>
+                      <dd>
+                        <p class="result success"><em>190,718</em>건</p>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li class="no-data">
+                    <dl>
+                      <dt>
+                        <span class="logo"><img src="img/connection/ic_naver.png" alt=""></span>
+                        <span class="txt">NAVER</span>
+                      </dt>
+                      <dd>
+                        <p class="result no-data">미수집</p>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li>
+                    <dl>
+                      <dt>
+                        <span class="logo"><img src="img/connection/ic_tmap.png" alt=""></span>
+                        <span class="txt">SKT</span>
+                      </dt>
+                      <dd>
+                        <p class="result success"><em>190,718</em>건</p>
+                      </dd>
+                    </dl>
+                  </li>
+                  <li class="fail">
+                    <dl>
+                      <dt>
+                        <span class="logo"><img src="img/connection/ic_tway.png" alt=""></span>
+                        <span class="txt">팅크웨어</span>
+                      </dt>
+                      <dd>
+                        <p class="result fail">실패</p>
+                      </dd>
+                    </dl>
+                  </li>
+                </ul>
+                <div class="effect-area">
+                  <img src="img/connection/effect_connection.gif" alt="">
+                  <p class="total-text"><em>0</em>건 수집완료</p>
+                </div><!-- .effect-area -->
+                <div class="total-area">
+                  <div class="inner">
+                    <p>
+                      <span class="txt">전국 통합 소통정보</span>
+                      <span class="total"><em class="count">0</em>건 (<em class="percent">00</em>%)</span>
+                      <span class="txt">생성</span>
+                    </p>
+                  </div>
+                </div><!-- .total-area -->
+              </div><!-- .collection-content -->
+            </div><!-- .collection-area -->
+          </div><!-- .row-area -->
+          <div class="row-area">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span>실시간 소통정보 <strong>융합 시간 현황</strong></span></h3>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="col-area">
+              <div class="chart-area ver_barstack">
+                <div id="barStackChart" style="width: 100%; height: 378px;"></div>
+              </div>
+            </div>
+          </div><!-- .row-area -->
+        </div><!-- .chart-wrap -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrapper -->
+  <script src="js/jquery.animateNumber.js"></script>
+  <script src="js/echarts.min.js"></script>
+  <script src="js/chartOption.js"></script>
+  <script>
+    var type = $.urlParam('type');
+    if (type) {
+      $('.tip-area.ver_local').hide();
+      setTimeout(() => {
+        $('.tab-base.map li').eq(type - 1).find('a').click();
+      }, 250);
+    }
+	  if (type === '2') { // 경기, 서울, 강원
+      $('.gye, .seoul, .gan').closest('.tip-area.ver_local').show();
+    } else if (type === '3') { // 충북, 대전, 세종, 충남
+      $('.cb, .dj, .sj, .cn').closest('.tip-area.ver_local').show();
+    } else if (type === '4') { // 전북, 광주, 제주, 전남
+      $('.jb, .gj, .jeju, .jn').closest('.tip-area.ver_local').show();
+    } else if (type === '5') { // 경북, 대구, 울산, 경남, 부산
+      $('.gb, .dg, .us, .gn, .busan').closest('.tip-area.ver_local').show();
+    }
+    
+    var countAni = function(selector, number, speed) {
+      $(selector).animateNumber({
+        number: number,
+        numberStep: function(now, tween) {
+          $(tween.elem).text(numberWithCommas(Math.floor(now)));
+        }
+      }, speed);  
+    }
+
+    countAni('.collection-area .logo-list > li dd .result.success em', 190718, 3000);
+    countAni('.collection-area .effect-area .total-text em', 190718 * 5, 3000);
+    countAni('.collection-area .total-area .inner p .total em.count', 190718 * 5, 3000);
+    countAni('.collection-area .total-area .inner p .total em.percent', 90, 3000);
+
+    var barStackChart = echarts.init(document.getElementById('barStackChart'));
+    barStackChart.setOption(options['barStack']);
+    window.addEventListener('resize', function () {
+      barStackChart.resize();
+    });
+  </script>
+</body>
+</html>
