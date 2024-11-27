@@ -28,16 +28,9 @@ body{width:100%;background-color:#2a2d30;min-width:1600px;}
 .map-wrap .stick.tp-yellow.h31{background:url(../img/map/stick_yellow_h31.png) 50% top no-repeat;}
 .map-wrap .stick:hover{background:url(../img/map/stick_hover.png) 50% top no-repeat;}
 .map-item {position: absolute;display:flex;gap:4px;}
-.tip-area{position: absolute;padding: 12px;-webkit-backdrop-filter: blur(15px);backdrop-filter: blur(15px);background-color: rgba(27, 28, 30, 0.8);border:1px solid #93bffd;border-radius:8px;}
-.tip-area .s-tit{font-size:15px;color:#bfd7fe;font-weight:700;line-height:1.3;}
-.tip-area ul{margin-top:8px;}
-.tip-area li{font-size:12px;line-height:1.3;font-weight:700;display:flex;justify-content:space-between;gap:0 4px;margin-top:2px;}
-.tip-area li:first-child{margin-top:0;}
-.tip-area li .label{color:#eff5ff;}
-.tip-area li .count{color:#bfd7fe;}
 .chart-wrap{padding:30px;}
 
-.row-area{display:flex;gap:20px;margin-top:20px;}
+.row-area{display:flex;gap:20px;margin-top:30px;}
 .row-area:first-child{margin-top:0;}
 .row-area .col-area{flex:1;}
 

@@ -258,10 +258,6 @@
     barLineChart2.setOption(options['barLine']);
     barLineChart3.setOption(options['barLine']);
 
-    $(window).on('load resize', function(){
-      $('.content-wrap').css('height', $(window).height() - 70);
-    });
-
     $(window).on('resize', function(){
       barLineChart1.resize();
       barLineChart2.resize();

@@ -53,6 +53,32 @@ var GUI = window.GUI || (function(){
       var popupUI = _.find('.popup-wrap');
       var csPopupUI = _.find('.cs-popup-wrap');
 
+      $(window).on('load resize', function(){
+        $('.content-wrap').css('height', $(window).height() - 70);
+      });
+
+      $('.control-area > a.pause').on('click', function(){
+        if (!$(this).hasClass('on')) {
+          $(this).addClass('on');
+        } else {
+          $(this).removeClass('on');
+        }
+      });
+
+      $('.arrow-animation[data-arrow]').each(function(){
+        var num = $(this).data('arrow');
+        if ($(this).hasClass('down')) {
+          for (let i=1; i<=num; i++) {
+            $(this).append(`<img class="arrow d${i}" src="img/accident/img-polygon-b.png" alt="">`);
+          }
+        }
+        if ($(this).hasClass('up')) {
+          for (let i=1; i<=num; i++) {
+            $(this).append(`<img class="arrow u${i}" src="img/accident/img-polygon-r.png" alt="">`);
+          }
+        }
+      });
+
       if (inputUI.length) {
         inputUI.each(function(){
           if ($(this).val().length) {

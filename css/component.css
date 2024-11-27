@@ -34,13 +34,26 @@
 .control-area > a.prev, .control-area > a.next{border-radius: 20px;background-color: rgba(255, 255, 255, 0.2);background-image: url(../img/icon/ic-next-w.png);width:28px;height:28px;}
 .control-area > a.prev{transform:rotate(180deg);}
 .control-area > a.pause{background-image:url(../img/icon/ic-stop-w.png);width:24px;height:24px;}
+.control-area > a.pause.on{background-image:url(../img/icon/ic-next-w.png);width:24px;height:24px;}
+.control-area.type-2{gap:0 16px;padding:9px 16px;border-radius: 8px;background-color: rgba(219, 232, 254, 0.1);box-shadow:none;}
+.control-area.type-2 > a{width:24px;height:24px;background-image: url(../img/icon/ic-next-b.png);background-color:transparent;}
+.control-area.type-2 > a.pause{background-image:url(../img/icon/ic-stop-b.png);}
+.control-area.type-2 > a.pause.on{background-image:url(../img/icon/ic-arrow-r.png);}
 
-.arrow-animation-wrap {display: flex; gap: 0 50px;}
+.arrow-animation-wrap {display: flex;align-items: center;}
+.arrow-animation-area {position: relative;width:5px;height:274px;overflow:hidden;}
+.arrow-animation-area .arrow-animation{position: absolute;left:0;}
+.arrow-animation-area .arrow-animation.up{bottom:0;}
+.arrow-animation-area .arrow-animation.down{top:0;}
 .arrow-animation {position: relative;width: 5px;height: 274px;overflow: hidden;}
 .arrow-animation .arrow {position: absolute;left: 0;width: 5px;height: 4px;opacity: 0;
 }
 .arrow-animation.up {background: url(../img/accident/img-arrow-up-s.png) 0 0 no-repeat;}
 .arrow-animation.down {background: url(../img/accident/img-arrow-down-s.png) 0 0 no-repeat;}
+
+.arrow-animation-area.type-2 .arrow-animation{height: 436px;}
+.arrow-animation-area.type-2 .arrow-animation.up {background: url(../img/accident/img-arrow-up-l.png) 0 0 no-repeat;}
+.arrow-animation-area.type-2 .arrow-animation.down {background: url(../img/accident/img-arrow-down-l.png) 0 0 no-repeat;}
 
 .arrow-animation.up .arrow.u1 { bottom: 0; animation-delay: 0s; }
 .arrow-animation.up .arrow.u2 { bottom: 9px; animation-delay: 0.1s; }
@@ -73,6 +86,35 @@
 .arrow-animation.up .arrow.u29 { bottom: 252px; animation-delay: 2.8s; }
 .arrow-animation.up .arrow.u30 { bottom: 261px; animation-delay: 2.9s; }
 .arrow-animation.up .arrow.u31 { bottom: 270px; animation-delay: 3s; }
+.arrow-animation.up .arrow.u32 { bottom: 279px; animation-delay: 3.1s; }
+.arrow-animation.up .arrow.u33 { bottom: 288px; animation-delay: 3.2s; }
+.arrow-animation.up .arrow.u34 { bottom: 297px; animation-delay: 3.3s; }
+.arrow-animation.up .arrow.u35 { bottom: 306px; animation-delay: 3.4s; }
+.arrow-animation.up .arrow.u36 { bottom: 315px; animation-delay: 3.5s; }
+.arrow-animation.up .arrow.u37 { bottom: 324px; animation-delay: 3.6s; }
+.arrow-animation.up .arrow.u38 { bottom: 333px; animation-delay: 3.7s; }
+.arrow-animation.up .arrow.u39 { bottom: 342px; animation-delay: 3.8s; }
+.arrow-animation.up .arrow.u40 { bottom: 351px; animation-delay: 3.9s; }
+.arrow-animation.up .arrow.u41 { bottom: 360px; animation-delay: 4s; }
+.arrow-animation.up .arrow.u42 { bottom: 369px; animation-delay: 4.1s; }
+.arrow-animation.up .arrow.u43 { bottom: 378px; animation-delay: 4.2s; }
+.arrow-animation.up .arrow.u44 { bottom: 387px; animation-delay: 4.3s; }
+.arrow-animation.up .arrow.u45 { bottom: 396px; animation-delay: 4.4s; }
+.arrow-animation.up .arrow.u46 { bottom: 405px; animation-delay: 4.5s; }
+.arrow-animation.up .arrow.u47 { bottom: 414px; animation-delay: 4.6s; }
+.arrow-animation.up .arrow.u48 { bottom: 423px; animation-delay: 4.7s; }
+.arrow-animation.up .arrow.u49 { bottom: 432px; animation-delay: 4.8s; }
+.arrow-animation.up .arrow.u50 { bottom: 441px; animation-delay: 4.9s; }
+.arrow-animation.up .arrow.u51 { bottom: 450px; animation-delay: 5s; }
+.arrow-animation.up .arrow.u52 { bottom: 459px; animation-delay: 5.1s; }
+.arrow-animation.up .arrow.u53 { bottom: 468px; animation-delay: 5.2s; }
+.arrow-animation.up .arrow.u54 { bottom: 477px; animation-delay: 5.3s; }
+.arrow-animation.up .arrow.u55 { bottom: 486px; animation-delay: 5.4s; }
+.arrow-animation.up .arrow.u56 { bottom: 495px; animation-delay: 5.5s; }
+.arrow-animation.up .arrow.u57 { bottom: 504px; animation-delay: 5.6s; }
+.arrow-animation.up .arrow.u58 { bottom: 513px; animation-delay: 5.7s; }
+.arrow-animation.up .arrow.u59 { bottom: 522px; animation-delay: 5.8s; }
+.arrow-animation.up .arrow.u60 { bottom: 531px; animation-delay: 5.9s; }
 
 .arrow-animation.down .arrow.d1 { top: 0; animation-delay: 0s; }
 .arrow-animation.down .arrow.d2 { top: 9px; animation-delay: 0.1s; }
@@ -105,9 +147,39 @@
 .arrow-animation.down .arrow.d29 { top: 252px; animation-delay: 2.8s; }
 .arrow-animation.down .arrow.d30 { top: 261px; animation-delay: 2.9s; }
 .arrow-animation.down .arrow.d31 { top: 270px; animation-delay: 3s; }
+.arrow-animation.down .arrow.d32 { top: 279px; animation-delay: 3.1s; }
+.arrow-animation.down .arrow.d33 { top: 288px; animation-delay: 3.2s; }
+.arrow-animation.down .arrow.d34 { top: 297px; animation-delay: 3.3s; }
+.arrow-animation.down .arrow.d35 { top: 306px; animation-delay: 3.4s; }
+.arrow-animation.down .arrow.d36 { top: 315px; animation-delay: 3.5s; }
+.arrow-animation.down .arrow.d37 { top: 324px; animation-delay: 3.6s; }
+.arrow-animation.down .arrow.d38 { top: 333px; animation-delay: 3.7s; }
+.arrow-animation.down .arrow.d39 { top: 342px; animation-delay: 3.8s; }
+.arrow-animation.down .arrow.d40 { top: 351px; animation-delay: 3.9s; }
+.arrow-animation.down .arrow.d41 { top: 360px; animation-delay: 4s; }
+.arrow-animation.down .arrow.d42 { top: 369px; animation-delay: 4.1s; }
+.arrow-animation.down .arrow.d43 { top: 378px; animation-delay: 4.2s; }
+.arrow-animation.down .arrow.d44 { top: 387px; animation-delay: 4.3s; }
+.arrow-animation.down .arrow.d45 { top: 396px; animation-delay: 4.4s; }
+.arrow-animation.down .arrow.d46 { top: 405px; animation-delay: 4.5s; }
+.arrow-animation.down .arrow.d47 { top: 414px; animation-delay: 4.6s; }
+.arrow-animation.down .arrow.d48 { top: 423px; animation-delay: 4.7s; }
+.arrow-animation.down .arrow.d49 { top: 432px; animation-delay: 4.8s; }
+.arrow-animation.down .arrow.d50 { top: 441px; animation-delay: 4.9s; }
+.arrow-animation.down .arrow.d51 { top: 450px; animation-delay: 5s; }
+.arrow-animation.down .arrow.d52 { top: 459px; animation-delay: 5.1s; }
+.arrow-animation.down .arrow.d53 { top: 468px; animation-delay: 5.2s; }
+.arrow-animation.down .arrow.d54 { top: 477px; animation-delay: 5.3s; }
+.arrow-animation.down .arrow.d55 { top: 486px; animation-delay: 5.4s; }
+.arrow-animation.down .arrow.d56 { top: 495px; animation-delay: 5.5s; }
+.arrow-animation.down .arrow.d57 { top: 504px; animation-delay: 5.6s; }
+.arrow-animation.down .arrow.d58 { top: 513px; animation-delay: 5.7s; }
+.arrow-animation.down .arrow.d59 { top: 522px; animation-delay: 5.8s; }
+.arrow-animation.down .arrow.d60 { top: 531px; animation-delay: 5.9s; }
 
 .arrow-animation.up .arrow {animation: move-up 3s infinite;}
 .arrow-animation.down .arrow {animation: move-down 3s infinite;}
+
 
 @keyframes move-up {
   0% {
