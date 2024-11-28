@@ -205,7 +205,10 @@
 .chart-area{padding:8px 16px;border-radius:8px;background-color:#222934;position: relative;}
 .chart-area.ver_barstack{min-height: 410px; padding: 16px 20px;}
 .chart-area.ver_linebar{min-height: 322px; padding: 16px 20px;}
+.chart-area.ver_doughnut{min-height: 342px; padding: 16px 20px;}
 .chart-area.ver_bar{min-height: 217px; padding: 16px;}
+.chart-area.ver_barv{min-height: 165px; padding: 19px 32px;}
+.chart-area.ver_barv .sub-title{margin-bottom:16px;}
 .chart-area .label{font-size:14px;font-weight:500;line-height:1.5;color:#b2bbce;text-align:center;display:block;}
 .chart-area.bg-white{background-color:#fff;}
 

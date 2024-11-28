@@ -129,16 +129,16 @@ var options = {
                 },
 
                 // 각 지역의 평균값 계산
-                // data: [
-                //     (520 + 1050 + 800 + 1650) / 4, // 수도권
-                //     (520 + 1050 + 800 + 1650) / 4, // 강원
-                //     (520 + 1050 + 800 + 1650) / 4, // 충북
-                //     (520 + 1050 + 800 + 1650) / 4, // 전남
-                //     (520 + 1050 + 800 + 1650) / 4, // 경북
-                //     (520 + 1050 + 800 + 1650) / 4, // 경남
-                //     (520 + 1050 + 800 + 1650) / 4, // 충남
-                //     (520 + 1050 + 800 + 1650) / 4, // 전북
-                // ],
+                data: [
+                    (520 + 1050 + 800 + 1650) / 4, // 수도권
+                    (520 + 1050 + 800 + 1650) / 4, // 강원
+                    (520 + 1050 + 800 + 1650) / 4, // 충북
+                    (520 + 1050 + 800 + 1650) / 4, // 전남
+                    (520 + 1050 + 800 + 1650) / 4, // 경북
+                    (520 + 1050 + 800 + 1650) / 4, // 경남
+                    (520 + 1050 + 800 + 1650) / 4, // 충남
+                    (520 + 1050 + 800 + 1650) / 4, // 전북
+                ],
 
                 // 각 지역의 고점
                 // data: [
@@ -646,15 +646,15 @@ var options = {
         ]
     },
 
-    barV: {
+    barV1: {
         title: {
             show: false,
         },
         tooltip: {
             trigger: 'axis',
-            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
             textStyle: {
-                color: '#fff', // 툴팁 글씨색상 설정
+                color: '#fff',
                 fontFamily: 'Pretendard',
                 fontSize: 12,
                 fontWeight: '600'
@@ -723,6 +723,83 @@ var options = {
             }
         ],
     },
+    barV2: {
+        title: {
+            show: false,
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            textStyle: {
+                color: '#fff',
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            show: false,
+        },
+        grid: {
+            left: '0%',
+            right: '20%',
+            bottom: '0%',
+            containLabel: true,
+            top: '0%',
+        },
+        xAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLabel: {
+                textStyle: {
+                    fontSize: 12,
+                    fontWeight: 500,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                },
+                show: false,
+            },
+            splitLine: {
+                show: false // 가운데 선 없애기
+            },
+            min: 0,
+            max: 250,
+        },
+        yAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['금일', '전일'],
+            axisLabel: {
+                textStyle: {
+                    fontSize: 12,
+                    fontWeight: 500,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                },
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(191, 215, 254, 0.2)', // y축 선 색상 설정
+                }
+            }
+        },
+        series: [
+            {
+                type: "bar",
+                name: "Mobile 접속자 수",
+                barWidth: 20,
+                data: [
+                    { value: 58, itemStyle: { color: '#e37eff' }, label: { show: true, position: 'right', formatter: '{c}명', textStyle: { color: '#93bffd', fontSize: 12 } } },
+                    { value: 238, itemStyle: { color: '#f2c1ff' }, label: { show: true, position: 'right', formatter: '{c}명', textStyle: { color: '#93bffd', fontSize: 12 } } },
+                ]
+            }
+        ],
+    },
 
     doughnut: {
         color: ['#2558eb', '#e37eff'],
@@ -742,8 +819,10 @@ var options = {
             formatter: '{b} - {c}%'
         },
         legend: {
-            itemWidth: 16, // 아이템 너비
-            itemHeight: 8, // 아이템 높이
+            icon: 'circle',
+            itemWidth: 20, // 아이템 너비
+            itemHeight: 20, // 아이템 높이
+            itemGap: 40,
             data: ['PC', 'Mobile'],
             textStyle: {
                 fontSize: 15,
@@ -751,12 +830,12 @@ var options = {
                 color: '#bfd7fe',
                 fontFamily: 'Pretendard',
             },
-            bottom: '0%', // 범례를 제목 아래로
+            bottom: '10%', // 범례를 제목 아래로
         },
         series: [
             {
                 type: 'pie',
-                radius: ['40%', '70%'],
+                radius: ['30%', '50%'],
                 avoidLabelOverlap: false,
                 center: ['50%', '40%'],
                 label: {

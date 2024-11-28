@@ -182,8 +182,10 @@
           <h3 class="sub-title"><span><strong>EChart</strong></span></h3>
         </div>
         <div class="code-area">
-          <h3>barLine 챠트 <button>코드 보기</button></h3>
-<div class="code-box"><div id="barLineChart1" style="width: 100%; height: 155px;"></div>
+          <h3>BarLine 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area">
+  <div id="barLineChart1" style="width: 100%; height: 155px;"></div>
+</div>
 <script src="js/echarts.min.js"></script>
 <script src="js/chartOption.js"></script></div>
 <script>
@@ -198,16 +200,16 @@ $(window).on('resize', function(){
         </div>
 
         <div class="code-area">
-          <h3>Bar Stack 챠트 <button>코드 보기</button></h3>
-<div class="code-box"><div class="chart-area" style="min-height: 404px;">
-  <div id="barStackChart" style="width: 100%; height: 372px;"></div>
+          <h3>BarStack 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area ver_barstack">
+  <div id="barStackChart" style="width: 100%; height: 378px;"></div>
 </div>
 <script src="js/echarts.min.js"></script>
 <script src="js/chartOption.js"></script></div>
 <script>var barStackChart = echarts.init(document.getElementById('barStackChart'));
 barStackChart.setOption(options['barStack']);
 window.addEventListener('resize', function () {
-barStackChart.resize();
+  barStackChart.resize();
 });</script>
 
 <pre class="language-html"></pre>
@@ -215,69 +217,92 @@ barStackChart.resize();
         </div>
 
         <div class="code-area">
-          <h3>Line + Bar 챠트 <button>코드 보기</button></h3>
-<div class="code-box"><div class="chart-area">
-  <div id="lineBarChart" style="width: 100%; height: 411px;"></div>
+          <h3>Bar Vertical 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area ver_barv">
+  <h4 class="sub-title pc">PC 접속자 수</h4>
+  <div id="barVChart1" style="width: 100%; height: 72px;"></div>
+</div>
+<div class="chart-area ver_barv mt12">
+  <h4 class="sub-title mo">Mobile 접속자 수</h4>
+  <div id="barVChart2" style="width: 100%; height: 72px;"></div>
 </div>
 <script src="js/echarts.min.js"></script>
-<script src="js/echartOptions2.js"></script></div>
-<script>var lineBarChart = echarts.init(document.getElementById('lineBarChart'));
-lineBarChart.setOption(options['lineBar']);
+<script src="js/chartOption.js"></script></div>
+<script>var barVChart1 = echarts.init(document.getElementById('barVChart1'));
+var barVChart2 = echarts.init(document.getElementById('barVChart2'));
+barVChart1.setOption(options['barV1']);
+barVChart2.setOption(options['barV2']);
 window.addEventListener('resize', function () {
-lineBarChart.resize();
+  barVChart1.resize();
+  barVChart2.resize();
 });</script>
 
 <pre class="language-html"></pre>
 <pre class="language-javascript"></pre>
         </div>
-
-        
-      </div><!-- .section -->
-
-      <div class="section">
-        <h2>EChart - BGF - <span>echartOptions.js</span></h2>
-
-        <div class="code-area">
-          <h3>Line 챠트 <button>코드 보기</button></h3>
-<div class="code-box"><div id="lineChart" style="width: 100%; height: 200px;"></div>
-<script src="js/echarts.min.js"></script>
-<script src="js/echartOptions.js"></script></div>
-<script>var lineChart = echarts.init(document.getElementById('lineChart'));
-lineChart.setOption(options['line']);
-window.addEventListener('resize', function () {
-  lineChart.resize();
-});</script>
-
-<pre class="language-html direct"><code><div id="lineChart" style="width: 100%; height: 200px;"></div>
-<script src="js/echarts.min.js"></script>
-<script src="js/echartOptions.js"></script></code></pre>
-<pre class="language-javascript"></pre>
-        </div>
-
 
         <div class="code-area">
           <h3>Doughnut 챠트 <button>코드 보기</button></h3>
-<div class="code-box"><div class="chart-area" style="min-height: 404px;">
-  <div class="inner">
-    <div id="doughnutChart2" style="width: 100%; height: 372px;"></div>
-  </div>
+<div class="code-box"><div class="chart-area ver_doughnut">
+  <div id="doughnutChart" style="width: 100%; height: 310px;"></div>
 </div>
 <script src="js/echarts.min.js"></script>
-<script src="js/echartOptions2.js"></script></div>
-<script>var doughnutChart2 = echarts.init(document.getElementById('doughnutChart2'));
-doughnutChart2.setOption(options['doughnut']);
+<script src="js/chartOption.js"></script></div>
+<script>var doughnutChart = echarts.init(document.getElementById('doughnutChart'));
+doughnutChart.setOption(options['doughnut']);
 window.addEventListener('resize', function () {
-doughnutChart2.resize();
+  doughnutChart.resize();
 });</script>
 
 <pre class="language-html"></pre>
 <pre class="language-javascript"></pre>
         </div>
-      </div><!-- //section -->
 
-      <script>
-        GUI.mainScroll();
-      </script>
+
+        <div class="code-area">
+          <h3>Bar 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area ver_bar">
+  <div id="barChart" style="width: 100%; height: 185px;"></div>
+</div>
+
+<div class="chart-area ver_bar">
+  <div id="barChart2" style="width: 100%; height: 185px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/chartOption.js"></script></div>
+<script>var barChart = echarts.init(document.getElementById('barChart'));
+var barChart2 = echarts.init(document.getElementById('barChart2'));
+
+barChart.setOption(options['bar']);
+barChart2.setOption(options['bar2']);
+
+window.addEventListener('resize', function () {
+  barChart.resize();
+  barChart2.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+
+
+        <div class="code-area">
+          <h3>Bar 챠트 <button>코드 보기</button></h3>
+<div class="code-box"><div class="chart-area ver_linebar">
+  <div id="lineBarChart" style="width: 100%; height: 290px;"></div>
+</div>
+<script src="js/echarts.min.js"></script>
+<script src="js/chartOption.js"></script></div>
+<script>var lineBarChart = echarts.init(document.getElementById('lineBarChart'));
+lineBarChart.setOption(options['lineBar']);
+window.addEventListener('resize', function () {
+  lineBarChart.resize();
+});</script>
+
+<pre class="language-html"></pre>
+<pre class="language-javascript"></pre>
+        </div>
+      </div><!-- .section -->
 
     </div><!-- #container -->
 
