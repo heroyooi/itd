@@ -546,4 +546,236 @@ var options = {
             },
         ]
     },
+
+    bar2: {
+        title: {
+            show: false,
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            show: false,
+        },
+        grid: {
+            left: '0%',
+            right: '0%',
+            bottom: '0%',
+            containLabel: true,
+            top: '2%', // 그래프 영역을 아래로 이동
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['교통소통정보', '돌발상황정보', 'VMS 정보', '취약구간정보', '통계정보'],
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                }
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 12,
+                    fontWeight: 500,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                },
+                interval: 0,
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            }
+        },
+        yAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157',
+                },
+            },
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#3e4157'
+                },
+            },
+            axisLabel: {
+                textStyle: {
+                    fontSize: 10,
+                    fontWeight: 300,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                }
+            },
+            min: 0,
+            max: 325,
+            interval: 25,
+        },
+        series: [
+            {
+                name: "값1",
+                type: "bar",
+                showBackground: true,
+                backgroundStyle: {
+                    color: '#3a4454'
+                },
+                barWidth: 20,
+                itemStyle: {
+                    borderRadius: [2, 2, 0, 0],
+                },
+                data: [
+                    { value: 175, itemStyle: { color: '#2558eb' } },
+                    { value: 270, itemStyle: { color: '#2fe728' } },
+                    { value: 200, itemStyle: { color: '#21ced3' } },
+                    { value: 290, itemStyle: { color: '#d655a6' } },
+                    { value: 100, itemStyle: { color: '#e9ec20' } },
+                ]
+            },
+        ]
+    },
+
+    barV: {
+        title: {
+            show: false,
+        },
+        tooltip: {
+            trigger: 'axis',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+        },
+        legend: {
+            show: false,
+        },
+        grid: {
+            left: '0%',
+            right: '20%',
+            bottom: '0%',
+            containLabel: true,
+            top: '0%',
+        },
+        xAxis: {
+            type: 'value',
+            position: 'left',
+            alignTicks: true,
+            axisLabel: {
+                textStyle: {
+                    fontSize: 12,
+                    fontWeight: 500,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                },
+                show: false,
+            },
+            splitLine: {
+                show: false // 가운데 선 없애기
+            },
+            min: 0,
+            max: 250,
+        },
+        yAxis: {
+            type: 'category',
+            boundaryGap: true,
+            data: ['금일', '전일'],
+            axisLabel: {
+                textStyle: {
+                    fontSize: 12,
+                    fontWeight: 500,
+                    fontFamily: 'Pretendard',
+                    color: '#bfd7fe'
+                },
+            },
+            axisTick: {
+                show: false // x축의 작은 세로선 숨기기
+            },
+            axisLine: {
+                lineStyle: {
+                    color: 'rgba(191, 215, 254, 0.2)', // y축 선 색상 설정
+                }
+            }
+        },
+        series: [
+            {
+                type: "bar",
+                name: "PC 접속자 수",
+                barWidth: 20,
+                data: [
+                    { value: 235, itemStyle: { color: '#2558eb' }, label: { show: true, position: 'right', formatter: '{c}명', textStyle: { color: '#93bffd', fontSize: 12 } } },
+                    { value: 67, itemStyle: { color: '#bfd7fe' }, label: { show: true, position: 'right', formatter: '{c}명', textStyle: { color: '#93bffd', fontSize: 12 } } },
+                ]
+            }
+        ],
+    },
+
+    doughnut: {
+        color: ['#2558eb', '#e37eff'],
+        title: {
+            show: false,
+        },
+        tooltip: {
+            trigger: 'item',
+            backgroundColor: 'rgba(0, 0, 0, 0.7)', // 툴팁 배경색상 설정
+            textStyle: {
+                color: '#fff', // 툴팁 글씨색상 설정
+                fontFamily: 'Pretendard',
+                fontSize: 12,
+                fontWeight: '600'
+            },
+            borderWidth: 0,
+            formatter: '{b} - {c}%'
+        },
+        legend: {
+            itemWidth: 16, // 아이템 너비
+            itemHeight: 8, // 아이템 높이
+            data: ['PC', 'Mobile'],
+            textStyle: {
+                fontSize: 15,
+                fontWeight: 500,
+                color: '#bfd7fe',
+                fontFamily: 'Pretendard',
+            },
+            bottom: '0%', // 범례를 제목 아래로
+        },
+        series: [
+            {
+                type: 'pie',
+                radius: ['40%', '70%'],
+                avoidLabelOverlap: false,
+                center: ['50%', '40%'],
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: false,
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    { value: 75, name: 'PC' },
+                    { value: 25, name: 'Mobile' },
+                ]
+            }
+        ]
+    },
 }

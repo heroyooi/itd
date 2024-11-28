@@ -44,7 +44,12 @@
           <div class="row-area mt12">
             <div class="col-area">
               <div class="chart-area">
-                
+                <div id="barChartV" style="width: 100%; height: 185px;"></div>
+              </div>
+            </div><!-- .col-area -->
+            <div class="col-area">
+              <div class="chart-area">
+                <div id="doughnutChart" style="width: 100%; height: 372px;"></div>
               </div>
             </div>
           </div><!-- .row-area -->
@@ -68,7 +73,7 @@
           <div class="row-area mt12">
             <div class="col-area">
               <div class="chart-area ver_bar">
-                
+                <div id="barChart2" style="width: 100%; height: 185px;"></div>
               </div>
             </div>
           </div><!-- .row-area -->
@@ -125,13 +130,24 @@
     countAni('.collection-area .total-area .inner p .total em.count', 190718 * 5, 3000);
     countAni('.collection-area .total-area .inner p .total em.percent', 90, 3000);
 
+    var barChartV = echarts.init(document.getElementById('barChartV'));
     var barChart = echarts.init(document.getElementById('barChart'));
+    var barChart2 = echarts.init(document.getElementById('barChart2'));
     var lineBarChart = echarts.init(document.getElementById('lineBarChart'));
+    var doughnutChart = echarts.init(document.getElementById('doughnutChart'));
+
+    barChartV.setOption(options['barV']);
     barChart.setOption(options['bar']);
+    barChart2.setOption(options['bar2']);
     lineBarChart.setOption(options['lineBar']);
+    doughnutChart.setOption(options['doughnut']);
+
     window.addEventListener('resize', function () {
       barChart.resize();
+      barChart2.resize();
+      barChartV.resize();
       lineBarChart.resize();
+      doughnutChart.resize();
     });
   </script>
 </body>
