@@ -516,8 +516,6 @@ var options = {
                     fontFamily: 'Pretendard',
                     color: '#bfd7fe'
                 },
-                // showMinLabel: true,
-                // showMaxLabel: true
             },
             min: 0,
             max: 325,

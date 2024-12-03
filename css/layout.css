@@ -32,6 +32,6 @@ body{width:100%;background-color:#2a2d30;min-width:1600px;}
 .map-item {position: absolute;display:flex;gap:4px;}
 .chart-wrap{padding:30px;}
 
-.row-area{display:flex;gap:20px;margin-top:30px;width:100%;}
+.row-area{display:flex;gap:20px;margin-top:20px;width:100%;}
 .row-area:first-child{margin-top:0;}
 .row-area .col-area{flex:1;}
