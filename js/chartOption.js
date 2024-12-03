@@ -515,11 +515,14 @@ var options = {
                     fontWeight: 300,
                     fontFamily: 'Pretendard',
                     color: '#bfd7fe'
-                }
+                },
+                // showMinLabel: true,
+                // showMaxLabel: true
             },
             min: 0,
             max: 325,
             interval: 25,
+            
         },
         series: [
             {
