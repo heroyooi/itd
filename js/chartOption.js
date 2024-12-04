@@ -431,15 +431,15 @@ var options = {
             {
                 name: '응답시간',
                 type: 'line',
-                symbol: 'circle',
-                symbolSize: 7,
+                // symbol: 'circle',
+                // symbolSize: 7,
                 data: [190, 230, 205, 280, 240, 140, 150, 130]
             },
             {
                 name: '호출건수',
                 type: 'line',
-                symbol: 'circle',
-                symbolSize: 7,
+                // symbol: 'circle',
+                // symbolSize: 7,
                 data: [315, 270, 280, 255, 130, 260, 280, 225]
             },
         ]
