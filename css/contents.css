@@ -108,6 +108,6 @@
 .result-list > li .tit + .detail{margin-top:20px;}
 .result-list > li .detail li{margin-top:12px;}
 .result-list > li .detail li:first-child{margin-top:0;}
-.result-list > li .detail li span{display:block;font-weight:500;line-height:1.3;}
+.result-list > li .detail li span{display:block;font-weight:500;line-height:1.28;}
 .result-list > li .detail li .label{font-size:15px;color:#eff5ff;}
 .result-list > li .detail li .num{font-size:17px;color:#93bffd;margin-top:4px;}

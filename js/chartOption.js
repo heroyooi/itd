@@ -431,15 +431,29 @@ var options = {
             {
                 name: '응답시간',
                 type: 'line',
-                // symbol: 'circle',
-                // symbolSize: 7,
+                symbol: 'circle',
+                symbolSize: 7,
+                itemStyle: {
+                    color: '#222934',
+                    borderColor: '#2fe728',
+                },
+                lineStyle: {
+                    color: '#2fe728',
+                },
                 data: [190, 230, 205, 280, 240, 140, 150, 130]
             },
             {
                 name: '호출건수',
                 type: 'line',
-                // symbol: 'circle',
-                // symbolSize: 7,
+                symbol: 'circle',
+                symbolSize: 7,
+                itemStyle: {
+                    color: '#222934',
+                    borderColor: '#93bffd',
+                },
+                lineStyle: {
+                    color: '#93bffd',
+                },
                 data: [315, 270, 280, 255, 130, 260, 280, 225]
             },
         ]
