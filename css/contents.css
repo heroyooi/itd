@@ -111,3 +111,10 @@
 .result-list > li .detail li span{display:block;font-weight:500;line-height:1.28;}
 .result-list > li .detail li .label{font-size:15px;color:#eff5ff;}
 .result-list > li .detail li .num{font-size:17px;color:#93bffd;margin-top:4px;}
+
+/* 25-09 */
+.tb-flex.theme-r .tb-col .tb-head{border-bottom: solid 1px rgba(240, 186, 255, 0.2);background-color: rgba(205, 23, 255, 0.55);}
+.tb-flex.theme-r .tb-col .tb-body{background-color: rgba(196, 52, 236, 0.4);}
+
+.tb-flex.theme-b .tb-col .tb-head{border-bottom: solid 1px rgba(147, 191, 253, 0.2);background-color: rgba(21, 95, 255, 0.55);}
+.tb-flex.theme-b .tb-col .tb-body{background-color: rgba(0, 82, 255, 0.4);}

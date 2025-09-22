@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+  <title> 24년국가교통정보센터 </title>
+  <link rel="stylesheet" href="css/common.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ui.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <div class="tab-base gnb">
+        <ul>
+          <li><a href="#tab1">사고</a></li>
+          <li><a href="#tab2">교통</a></li>
+          <li><a href="#tab3">연계</a></li>
+          <li><a href="#tab4">서비스</a></li>
+          <li class="on"><a href="#tab5">특송관리</a></li>
+        </ul>
+      </div>
+      <h1>교통현황 <span>대시보드</span></h1>
+      <div class="item-area">
+        <!--
+        <div class="tab-base period">
+          <ul>
+            <li class="on"><a href="#">일간</a></li>
+            <li><a href="#">주간</a></li>
+            <li><a href="#">월간</a></li>
+          </ul>
+        </div>
+        -->
+        <span class="date">2024년 10월 19일 10:00 기준</span>
+        <a href="#" class="btn-ico reload">새로고침</a>
+      </div>
+    </div><!-- #header -->
+    <div id="container">
+      <div class="content-wrap">
+        <div class="map-wrap" style="background: url(/img/map/map.png) 50% 50% no-repeat;background-size:cover;">
+          <!--
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1646684.4943605827!2d126.5694643929551!3d36.28366630777935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356455ebcb11ba9b%3A0x91249b00ba88db4b!2z64yA7ZWc66-86rWt!5e0!3m2!1sko!2skr!4v1732676765495!5m2!1sko!2skr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          -->
+          <div class="tit-area">
+            <h3 class="sub-title"><span>고속도로 <strong>주요 구간별 소통현황</strong></span></h3>
+          </div>
+
+          <div class="tip-area" style="right: 181px; top: 94px; min-width: 110px;">
+            <div class="s-move">
+              <span class="local">서울</span>
+              <span class="ico"></span>
+              <span class="local">양양</span>
+            </div>
+            <span class="s-time">1:50</span>
+          </div>
+
+          <div class="tip-area" style="right: 139px; top: 180px; min-width: 110px;">
+            <div class="s-move">
+              <span class="local">서울</span>
+              <span class="ico"></span>
+              <span class="local">강릉</span>
+            </div>
+            <span class="s-time">2:35</span>
+          </div> 
+
+          <div class="tip-area" style="left: 191px; top: 417px; min-width: 110px;">
+            <div class="s-move">
+              <span class="local">서울</span>
+              <span class="ico"></span>
+              <span class="local">대전</span>
+            </div>
+            <span class="s-time">1:40</span>
+          </div>
+          
+          <div class="tip-area" style="left: 188px; top: 683px; min-width: 110px;">
+            <div class="s-move">
+              <span class="local">서울</span>
+              <span class="ico"></span>
+              <span class="local">광주</span>
+            </div>
+            <span class="s-time">3:20</span>
+          </div>
+
+          <div class="tip-area" style="left: 259px; bottom: 30px; min-width: 110px;">
+            <div class="s-move">
+              <span class="local">서울</span>
+              <span class="ico"></span>
+              <span class="local">목표</span>
+            </div>
+            <span class="s-time">3:45</span>
+          </div>
+
+          <div class="tip-area" style="right: 65px; bottom: 343px; min-width: 110px;">
+            <div class="s-move">
+              <span class="local">서울</span>
+              <span class="ico"></span>
+              <span class="local">대구</span>
+            </div>
+            <span class="s-time">3:35</span>
+          </div>
+
+          <div class="tip-area" style="right: 143px; bottom: 197px; min-width: 110px;">
+            <div class="s-move">
+              <span class="local">서울</span>
+              <span class="ico"></span>
+              <span class="local">부산</span>
+            </div>
+            <span class="s-time">4:30</span>
+          </div>
+
+          <div class="map-item" style="right: 30px; bottom: 30px;">
+            <div class="tab-base map">
+              <ul>
+                <li class="on"><a href="#">상행</a></li>
+                <li><a href="#">하행</a></li>
+              </ul>
+            </div>
+            <!--
+            <div class="control-area">
+              <a href="#" class="prev"></a>
+              <a href="#" class="pause"></a>
+              <a href="#" class="next"></a>
+            </div>
+            -->
+          </div>
+        </div><!-- .map-wrap -->
+        <div class="chart-wrap c-scrollbar">
+          <div class="row-area">
+            <div class="tab-base etc solo">
+              <ul>
+                <li class="on"><a href="#">서울</a></li>
+              </ul>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area" style="margin-top: 28px;">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span>실시간 고속도로 <strong>주요 정체구간</strong></span></h3>
+              <ul class="legend-info">
+                <li class="up"><span>상행</span></li>
+                <li class="down"><span>하행</span></li>
+              </ul>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="col-area">
+              <div class="tb-flex theme-r">
+                <div class="tb-col-wrap" style="width: 116px;">
+                  <div class="tb-col">
+                    <div class="tb-head"><span class="item">지역</span></div>
+                    <div class="tb-body">
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow-animation-wrap">
+                  <div class="arrow-animation-area">
+                    <div class="arrow-animation up" data-arrow="31"></div>
+                  </div>
+                </div><!-- .arrow-animation-wrap -->
+                <div class="tb-col-wrap w-full">
+                  <div class="tb-col">
+                    <div class="tb-head"><span class="item">구간명</span></div>
+                    <div class="tb-body">
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                    </div>
+                  </div>
+                  <div class="tb-col">
+                    <div class="tb-head"><span class="item">속도</span></div>
+                    <div class="tb-body">
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-area">
+              <div class="tb-flex theme-b">
+                <div class="tb-col-wrap" style="width: 116px;">
+                  <div class="tb-col">
+                    <div class="tb-head"><span class="item">지역</span></div>
+                    <div class="tb-body">
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                      <span class="item">부산 - 서울</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow-animation-wrap">
+                  <div class="arrow-animation-area">
+                    <div class="arrow-animation down" data-arrow="31"></div>
+                  </div>
+                </div><!-- .arrow-animation-wrap -->
+                <div class="tb-col-wrap w-full">
+                  <div class="tb-col">
+                    <div class="tb-head"><span class="item">구간명</span></div>
+                    <div class="tb-body">
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                      <span class="item">수도권제1순환선</span>
+                    </div>
+                  </div>
+                  <div class="tb-col">
+                    <div class="tb-head"><span class="item">속도</span></div>
+                    <div class="tb-body">
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                      <span class="item">50km/h</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area">
+            <div class="tit-area mb0">
+              <h3 class="sub-title"><span>주요 도시간 <strong>소요시간</strong></span></h3>
+              <ul class="legend-info">
+                <li class="up"><span>출발</span></li>
+                <li class="down"><span>도착</span></li>
+              </ul>
+            </div>
+          </div><!-- .row-area -->
+          <div class="row-area mt12">
+            <div class="col-area">
+              <div class="tb-flex theme-r">
+                <div class="tb-col-wrap" style="width: 80px;">
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">서울</span></div>
+                    <div class="tb-body">
+                      <span class="item">양양</span>
+                      <span class="item">강릉</span>
+                      <span class="item">대전</span>
+                      <span class="item">대구</span>
+                      <span class="item">울산</span>
+                      <span class="item">광주</span>
+                      <span class="item">서울</span>
+                      <span class="item">목포</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow-animation-wrap">
+                  <div class="arrow-animation-area type-2">
+                    <div class="arrow-animation up" data-arrow="60"></div>
+                  </div>
+                </div><!-- .arrow-animation-wrap -->
+                <div class="tb-col-wrap w-full">
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">실시간<em>(1주 평균 대비)</em></span></div>
+                    <div class="tb-body">
+                      <span class="item">1:42<em class="diff up">(+3)</em></span>
+                      <span class="item">1:42<em class="diff down">(-3)</em></span>
+                      <span class="item">1:42<em class="diff up">(+3)</em></span>
+                      <span class="item">1:42<em class="diff down">(-2)</em></span>
+                      <span class="item">1:42<em class="diff up">(+1)</em></span>
+                      <span class="item">1:42<em class="diff up">(+1)</em></span>
+                      <span class="item">1:42<em class="diff up">(+1)</em></span>
+                      <span class="item">1:42<em class="diff down">(-1)</em></span>
+                    </div>
+                  </div>
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">1주 평균</span></div>
+                    <div class="tb-body">
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                    </div>
+                  </div>
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">1개월 평균</span></div>
+                    <div class="tb-body">
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-area">
+              <div class="tb-flex theme-b">
+                <div class="tb-col-wrap" style="width: 80px;">
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">서울</span></div>
+                    <div class="tb-body">
+                      <span class="item">양양</span>
+                      <span class="item">강릉</span>
+                      <span class="item">대전</span>
+                      <span class="item">대구</span>
+                      <span class="item">울산</span>
+                      <span class="item">광주</span>
+                      <span class="item">서울</span>
+                      <span class="item">목포</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="arrow-animation-wrap">
+                  <div class="arrow-animation-area type-2">
+                    <div class="arrow-animation down" data-arrow="60"></div>
+                  </div>
+                </div><!-- .arrow-animation-wrap -->
+                <div class="tb-col-wrap w-full">
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">실시간<em>(1주 평균 대비)</em></span></div>
+                    <div class="tb-body">
+                      <span class="item">1:42<em class="diff up">(+3)</em></span>
+                      <span class="item">1:42<em class="diff down">(-3)</em></span>
+                      <span class="item">1:42<em class="diff up">(+3)</em></span>
+                      <span class="item">1:42<em class="diff down">(-2)</em></span>
+                      <span class="item">1:42<em class="diff up">(+1)</em></span>
+                      <span class="item">1:42<em class="diff up">(+1)</em></span>
+                      <span class="item">1:42<em class="diff up">(+1)</em></span>
+                      <span class="item">1:42<em class="diff down">(-1)</em></span>
+                    </div>
+                  </div>
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">1주 평균</span></div>
+                    <div class="tb-body">
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                    </div>
+                  </div>
+                  <div class="tb-col">
+                    <div class="tb-head type-2"><span class="item">1개월 평균</span></div>
+                    <div class="tb-body">
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                      <span class="item">1:42</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- .row-area -->
+        </div><!-- .chart-wrap -->
+      </div><!-- .content-wrap -->
+    </div><!-- #container -->
+  </div><!-- #wrapper -->
+  <script>
+    var query = $.urlParam('sample');
+	  if (query === '') {}
+  </script>
+</body>
+</html>
