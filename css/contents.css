@@ -120,7 +120,7 @@ body.renew .content-wrap .map-wrap, .content-wrap .chart-wrap{width:100%;}
 .info-area .info-obj{padding:12px 15px 8px;flex:1 1 auto;min-width:146px;}
 .info-area .info-obj:nth-child(2){border-left:4px solid #93bffd;}
 .info-area .info-obj .i-local{font-size:20px;color:#343840;line-height:1.3;display:flex;align-items: center;justify-content: center;}
-.info-area .info-obj .i-local span{display:block;flex-grow:1;font-weight:bold;}
+.info-area .info-obj .i-local span{display:block;flex-grow:1;font-weight:bold;text-align:center;}
 .info-area .info-obj .i-local span.arrow{flex-shrink:0;}
 .info-area .info-obj .i-local span.arrow img{vertical-align: middle;position: relative;top:-2px;}
 .info-area .info-obj .i-time{font-size:32px;font-weight:bold;color:#172254;display:block;text-align:center;line-height:1.3;}
